@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0019: Experimental Mark-Making</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0019: Experimental Mark-Making</h1>
+      <p><em>Explore different mediums and expressive strokes to find your voice.</em></p>
+
+      <p><span class="phase-badge">Phase 5: Advanced Composition &amp; Style</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Experiment with at least two different mediums (charcoal, ink, or watercolor pencil) and three mark-making techniques (stippling, scumbling, expressive line work).
+      </div>
+
+      <h2>Finding Your Style</h2>
+      <p>Up to now, you've been learning <strong>fundamentals</strong> — the universal skills every artist needs. Now it's time to explore. Your personal style emerges when you experiment with different tools and techniques and discover what feels natural and exciting to you.</p>
+
+      <h2>Three Techniques to Try</h2>
+
+      <h3>Stippling</h3>
+      <p>Building value with dots. More dots = darker. Fewer dots = lighter. It's slow but produces beautiful, textured results. Try it with a fine pen or sharp pencil.</p>
+
+      <h3>Scumbling</h3>
+      <p>Random, circular scribbles that layer to create soft, textured shading. Great for charcoal or soft pencil. It gives a loose, energetic feel.</p>
+
+      <h3>Expressive Line Work</h3>
+      <p>Varying line thickness, speed, and pressure within a single stroke. Thick-to-thin lines, jagged lines, flowing lines — let your hand be free and expressive.</p>
+
+      <h2>Mediums to Explore</h2>
+      <ul>
+        <li><strong>Charcoal</strong> — soft, blendable, dramatic. Best for quick, bold sketches</li>
+        <li><strong>Ink pen</strong> — permanent, forces commitment. Best for crisp, confident line work</li>
+        <li><strong>Watercolor pencil</strong> — draw then brush water for painterly effects. Best for hybrid drawings</li>
+        <li><strong>Your usual graphite</strong> — but try holding it differently (underhand grip for loose shading)</li>
+      </ul>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Take one object (an apple, a cup, or a plant).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Draw it 4 times on the same page, each time using a different technique.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Which one felt most natural? Which one do you like looking at most?</p></div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Don't worry about "mistakes" with new mediums. Charcoal smudges? That's part of the look. Ink bled? Now it's a texture. Every "mistake" is a discovery you can use intentionally later.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What is stippling?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Building value with dots</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Sweeping lines</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Blending with a stump</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What medium is permanent and forces you to commit to your strokes?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Graphite pencil</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Charcoal</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Ink pen</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 4x4 Style Studies</h3>
+        <p>Draw the same simple subject (your hand, a coffee cup, or a crumpled paper bag) four times using four different techniques: stippling, scumbling, hatching, and expressive line work. Use at least two different mediums. Date the page and note which combination felt most "you."</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Personal style comes from experimenting with tools and techniques</li>
+        <li>Stippling = dots, scumbling = circular scribbles, expressive lines = varied pressure</li>
+        <li>Try charcoal, ink, and watercolor pencil beyond just graphite</li>
+        <li>"Mistakes" with new mediums are discoveries</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        <a href="https://www.youtube.com/@ALPHONSODUNN" target="_blank" rel="noopener">Alphonso Dunn's pen &amp; ink tutorials</a> are perfect for exploring mark-making. Also try following along with a "draw this in your style" challenge on social media.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'a', q2: 'c' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

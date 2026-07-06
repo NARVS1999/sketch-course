@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0006: Hatching &amp; Cross-Hatching</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0006: Hatching &amp; Cross-Hatching</h1>
+      <p><em>Build value gradients using parallel lines and intersecting layers.</em></p>
+
+      <p><span class="phase-badge">Phase 2: Shading &amp; Volume</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Create smooth value gradients from light to dark using hatching and cross-hatching techniques.
+      </div>
+
+      <h2>The Power of Parallel Lines</h2>
+      <p>Hatching is one of the oldest shading techniques. By drawing parallel lines closer together, you create darker values. By spreading them apart, you create lighter values. It's that simple — and that powerful.</p>
+
+      <h2>Hatching Practice</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw a long rectangle (about 10 cm × 3 cm). This is your value strip.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Start at the left with widely spaced diagonal lines (light). Gradually move them closer together as you go right.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>By the right end, the lines should be nearly touching (dark). You should see a smooth gradient.</p></div>
+      </div>
+
+      <h2>Cross-Hatching Practice</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw another value strip. First layer: diagonal lines (top-left to bottom-right).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Second layer: diagonal lines the opposite way (top-right to bottom-left). Add these only on the right half for a darker value.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Third layer: vertical lines on the darkest quarter. Each layer doubles the darkness.</p></div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Keep the lines straight and parallel. Vary the <strong>spacing</strong>, not the pressure. Consistent, tidy lines look professional; messy lines look messy.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. How do you create darker values with hatching?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Press harder</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Place lines closer together</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Use a softer pencil only</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What is cross-hatching?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Drawing lines in one direction only</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Multiple layers of hatching at different angles</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Smudging lines with your finger</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: Shaded Cylinder &amp; Cube</h3>
+        <p>Draw a cylinder (like a can) and a cube. Shade both using hatching and cross-hatching. Use only line work — no smudging or blending. Aim for 5 distinct value levels on each.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Hatching = parallel lines. Closer spacing = darker value</li>
+        <li>Cross-hatching = multiple layers of hatching at different angles</li>
+        <li>Vary spacing, not pressure, for smooth gradients</li>
+        <li>Keep lines straight and parallel for a clean look</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Watch <a href="https://www.youtube.com/@ALPHONSODUNN" target="_blank" rel="noopener">Alphonso Dunn's hatching tutorial</a> — he's the master of pen-and-ink shading.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

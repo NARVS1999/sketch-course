@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch Course — From Lines to Masterpiece</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="landing">
+  <h1>Sketch Course</h1>
+  <p class="subtitle">A 5-phase journey from shaky lines to your first portfolio piece.</p>
+
+  <ul class="desc">
+    <li>Train your hand and eye with foundation line exercises</li>
+    <li>Master shading, volume, and texture to make drawings pop</li>
+    <li>Understand perspective and proportion for realistic scenes</li>
+    <li>Draw the human face and figure with confidence</li>
+    <li>Develop your own style and create a final masterpiece</li>
+  </ul>
+
+  <a href="lessons/0001-the-warm-up-scribble.html" class="btn-start">Start the Course &rarr;</a>
+
+  <div class="phases">
+    <h2 style="border:none; margin-top:0;">Course Overview</h2>
+
+    <div class="phase-item">
+      <span class="phase-num">Phase 1</span>
+      <span class="phase-name">Foundation &amp; Line Control</span>
+      <span class="phase-count">4 lessons</span>
+    </div>
+    <div class="phase-item">
+      <span class="phase-num">Phase 2</span>
+      <span class="phase-name">Shading &amp; Volume</span>
+      <span class="phase-count">4 lessons</span>
+    </div>
+    <div class="phase-item">
+      <span class="phase-num">Phase 3</span>
+      <span class="phase-name">Perspective &amp; Proportion</span>
+      <span class="phase-count">4 lessons</span>
+    </div>
+    <div class="phase-item">
+      <span class="phase-num">Phase 4</span>
+      <span class="phase-name">Portrait &amp; Anatomy</span>
+      <span class="phase-count">4 lessons</span>
+    </div>
+    <div class="phase-item">
+      <span class="phase-num">Phase 5</span>
+      <span class="phase-name">Advanced Composition &amp; Style</span>
+      <span class="phase-count">4 lessons</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

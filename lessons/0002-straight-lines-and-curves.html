@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0002: Straight Lines &amp; Curves</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0002: Straight Lines &amp; Curves</h1>
+      <p><em>Parallel lines, cross-hatching, and S-curves — all without a ruler.</em></p>
+
+      <p><span class="phase-badge">Phase 1: Foundation &amp; Line Control</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Draw straight lines and smooth curves with consistent spacing and pressure — no ruler allowed.
+      </div>
+
+      <h2>Lines Are Everything</h2>
+      <p>Every drawing is built from lines — straight ones, curved ones, long ones, short ones. The better you control your lines, the better everything else becomes. Your goal here is <strong>consistency</strong>, not speed.</p>
+
+      <h2>Straight Lines</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw two dots about 10 cm apart. Connect them with a single straight line in one swift motion (don't go slow — commit!).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Repeat 20 times. Aim for lines that hit both dots.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Now draw <strong>parallel lines</strong>: 10 vertical lines, equally spaced, all the same length. Then horizontal. Then diagonal.</p></div>
+      </div>
+
+      <h2>Curves &amp; S-Curves</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw two dots. Connect them with a smooth C-curve (bowing up). Then a reverse C-curve (bowing down).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Draw an S-curve: start left, curve right, then curve back left to the endpoint. Make it smooth — no sharp corners.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Fill a whole page with parallel S-curves, like rolling hills. Keep the spacing even.</p></div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Move from your <strong>shoulder</strong>, not your wrist, for long lines. Your shoulder gives you a bigger, smoother range of motion. Lock your wrist and pivot from the elbow or shoulder.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What body part should you move from for long, smooth lines?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Fingers only</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Shoulder</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Wrist only</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What is the goal of parallel line practice?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Speed</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Consistency and spacing</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Making them as dark as possible</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: Line Grid</h3>
+        <p>Draw a 10×10 grid of 5 cm squares entirely freehand. All lines should be straight, parallel, and evenly spaced. This is harder than it looks — and excellent training for your hand.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Draw straight lines with one swift motion — commit, don't hesitate</li>
+        <li>Move from your shoulder for long, smooth lines</li>
+        <li>Practice parallel lines and S-curves for control</li>
+        <li>Consistency matters more than speed</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Try <a href="https://drawabox.com/lesson/1" target="_blank" rel="noopener">Draw a Box Lesson 1</a> — their line exercises are world-class for beginners.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher for help, or check the <a href="../reference/glossary.html">glossary</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

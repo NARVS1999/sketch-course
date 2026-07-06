@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0010: 2-Point Perspective</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0010: 2-Point Perspective</h1>
+      <p><em>Draw a building from a corner view — two vanishing points bring it to life.</em></p>
+
+      <p><span class="phase-badge">Phase 3: Perspective &amp; Proportion</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Draw a cube or building using 2-point perspective with accurate vanishing points and vertical alignment.
+      </div>
+
+      <h2>When to Use 2-Point Perspective</h2>
+      <p>1-point is for front-facing views. 2-point is for <strong>corner views</strong> — when you see two sides of an object. It's how we naturally see buildings, boxes, and most objects in daily life.</p>
+
+      <h2>Setting It Up</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw your <strong>horizon line</strong> across the page.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Place two vanishing points far apart — one on the left, one on the right. The farther apart they are, the less extreme the perspective.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Draw a vertical line between the two VPs — this is the <strong>front corner</strong> of your building.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>From the top and bottom of the front corner, draw lines to both VPs. These are your <strong>orthogonal lines</strong>.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content"><p>Draw two more vertical lines between the orthogonals — these define the back corners of the left and right sides.</p></div>
+      </div>
+
+      <h2>Build It Up</h2>
+      <p>Once you have the basic box, you can turn it into a house or building:</p>
+      <ul>
+        <li>Add a roof by finding the center of each wall and drawing a peak toward the VP</li>
+        <li>Add windows and doors aligned with the wall planes</li>
+        <li>Shadow one side for depth (the side away from your light source)</li>
+      </ul>
+
+      <div class="warning">
+        <strong>Common Mistake</strong>
+        Placing vanishing points too close together. This creates a distorted, fish-eye look. Keep VPs wide apart — in fact, one or both can be <em>off the page</em>. Use masking tape to extend your horizon line if needed.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. 2-point perspective is best for what kind of view?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Looking straight at a wall</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> A corner view showing two sides</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> A bird's-eye view from above</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What happens if you place VPs too close together?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> The drawing looks more realistic</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> The perspective looks distorted / fish-eye</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> The drawing becomes 1-point perspective</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: Street Corner</h3>
+        <p>Draw a street corner with at least two buildings in 2-point perspective. One building should be taller than the other. Add windows, doors, and sidewalks aligned with the perspective. Use hatching to shade one side of each building.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>2-point = corner view with two vanishing points on the HL</li>
+        <li>Vertical lines stay vertical; everything else converges to a VP</li>
+        <li>Keep VPs wide apart to avoid distortion</li>
+        <li>The front corner is the starting point — a vertical line between the VPs</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        <a href="https://drawabox.com/lesson/1" target="_blank" rel="noopener">Draw a Box Lesson 1</a> has excellent 2-point perspective exercises with boxes.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

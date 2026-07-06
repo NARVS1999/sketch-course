@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0011: Sight-Size Method</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0011: Sight-Size Method</h1>
+      <p><em>Measure your subject using a pencil — then transfer those proportions to paper.</em></p>
+
+      <p><span class="phase-badge">Phase 3: Perspective &amp; Proportion</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Use the sight-size method to measure and transfer a still life object's proportions accurately.
+      </div>
+
+      <h2>Proportions Made Practical</h2>
+      <p>Proportions are the relationship between sizes: how many times the width of an object fits into its height, or how the size of one object relates to another nearby. The sight-size method gives you a simple, physical way to get proportions right.</p>
+
+      <h2>How Sight-Size Works</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Hold your pencil at arm's length, arm locked. Close one eye.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Align the pencil tip with the top of your subject. Slide your thumb down to where the bottom aligns. This is your "measurement."</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Without moving your thumb, bring the pencil to your paper. Mark the top and bottom of your measurement.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Now measure the width the same way. Compare: how many widths fit in the height? This ratio is your proportion.</p></div>
+      </div>
+
+      <h2>Example: Drawing a Mug</h2>
+      <p>You're drawing a coffee mug on a table. Use sight-size to check:</p>
+      <ul>
+        <li>Height vs. width: "The mug is 1.5× taller than it is wide"</li>
+        <li>The handle starts 1/3 down from the top</li>
+        <li>The opening is an ellipse with a width equal to 2/3 of the height</li>
+      </ul>
+      <p>Check each relationship by measuring. Your eye will learn to see proportions over time.</p>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Check your measurements by flipping your pencil horizontally and vertically. This cross-checks that your proportions are accurate. Artists call this "plumb and level" — a vertical line (plumb) and horizontal line (level) to test alignment.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. How should you hold the pencil when sight-sizing?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Close to your face</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> At arm's length with a locked elbow</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Resting on the paper</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What does sight-size measure?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> The color of the subject</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Proportions — the relationship between sizes</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> The distance from you to the subject</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: Still Life Measurement</h3>
+        <p>Set up 3 objects (a bottle, a cup, and a book). Before drawing, measure each one's height-to-width ratio using sight-size. Then draw them, checking each major proportion against your measurements. How close did you get?</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Sight-size = pencil at arm's length to measure proportions</li>
+        <li>Measure height first, then width — compare the ratio</li>
+        <li>Check measurements by flipping vertical/horizontal</li>
+        <li>With practice, your eye will learn to see proportions naturally</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        <em>Drawing on the Right Side of the Brain</em> by Betty Edwards has excellent chapters on sight-size and proportion. Check it out at <a href="https://www.drawright.com/" target="_blank" rel="noopener">drawright.com</a>.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

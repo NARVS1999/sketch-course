@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0017: Rule of Thirds &amp; Focal Point</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0017: Rule of Thirds &amp; Focal Point</h1>
+      <p><em>Plan your drawing with a 3x3 grid and direct the viewer's eye.</em></p>
+
+      <p><span class="phase-badge">Phase 5: Advanced Composition &amp; Style</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Plan a composition using the rule of thirds grid, placing the focal point at an intersection for maximum visual impact.
+      </div>
+
+      <h2>What Is Composition?</h2>
+      <p>Composition is how you arrange the elements in your drawing. Good composition guides the viewer's eye around the page and makes the drawing feel balanced and intentional.</p>
+
+      <h2>The Rule of Thirds</h2>
+      <p>Divide your page into a 3x3 grid (two horizontal lines, two vertical lines). The key principle: place your most important element (the <strong>focal point</strong>) at one of the four intersections, NOT in the center.</p>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Lightly draw a 3x3 grid on your page (or imagine it).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Decide on your focal point — the main subject (a tree, a face, a building).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Place the focal point at one of the four grid intersections, not dead center.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Align other elements (horizon, edges, secondary objects) along the grid lines.</p></div>
+      </div>
+
+      <h2>Guiding the Eye</h2>
+      <p>Use lines in your composition to lead the viewer's eye toward the focal point:</p>
+      <ul>
+        <li><strong>Leading lines</strong> — roads, rivers, fences that point toward the subject</li>
+        <li><strong>Contrast</strong> — the brightest and darkest areas naturally attract attention</li>
+        <li><strong>Detail</strong> — the most detailed area pulls focus; simplify areas farther from the focal point</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Don't just center your subject. Off-center placement feels more dynamic and professional. Next time you look at a movie poster or photograph, notice how often the subject is at a rule-of-thirds intersection.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. Where should you place the focal point in a composition?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> In the exact center</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> At a rule-of-thirds grid intersection</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> In the bottom-left corner</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What do leading lines do in a composition?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> They make the drawing more detailed</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> They guide the viewer's eye toward the focal point</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> They add shading to the background</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 3 Thumbnail Compositions</h3>
+        <p>Draw 3 small thumbnail sketches (about 5×7 cm each) of the same scene — a tree on a hill, for example. In the first, center the tree. In the second, place it on the left third intersection. In the third, place it on the bottom-right intersection with a road leading to it. Compare which feels most dynamic.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Rule of thirds: 3x3 grid, place focal point at intersections</li>
+        <li>Off-center compositions feel more dynamic than centered ones</li>
+        <li>Use leading lines, contrast, and detail to guide the eye</li>
+        <li>Thumbnail sketches are a fast way to test compositions</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        <em>Framed Ink</em> by Marcos Mateu-Mestre is a masterclass in composition for drawing and storyboarding.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

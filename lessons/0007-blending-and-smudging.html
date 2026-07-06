@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0007: Blending &amp; Smudging</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0007: Blending &amp; Smudging</h1>
+      <p><em>Smooth shading with tissue, blending stump, or even your finger.</em></p>
+
+      <p><span class="phase-badge">Phase 2: Shading &amp; Volume</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Create seamless, smooth gradients using blending tools — perfect for soft surfaces like fruit, skin, or sky.
+      </div>
+
+      <h2>Hatching vs. Blending</h2>
+      <p>Hatching gives you a textured, graphic look. Blending gives you smooth, realistic transitions. Both are essential — the best drawings often use both.</p>
+
+      <h2>Your Blending Tools</h2>
+      <ul>
+        <li><strong>Blending stump</strong> — rolled paper tool, gives the most control</li>
+        <li><strong>Tissue / paper towel</strong> — good for large areas, soft effect</li>
+        <li><strong>Your finger</strong> — convenient but adds oils to the paper (use carefully)</li>
+        <li><strong>Cotton bud / Q-tip</strong> — good for small areas and details</li>
+      </ul>
+
+      <h2>Smooth Gradient Practice</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw a long rectangle. Fill the left side with heavy graphite (6B pencil) and the right side with nothing (white).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Using a tissue, gently rub from dark to light in a sweeping motion. The graphite will transfer, creating a smooth gradient.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Repeat with a blending stump for a more controlled gradient.</p></div>
+      </div>
+
+      <h2>Fruit Shading Exercise</h2>
+      <p>Round objects like apples, bananas, or oranges are perfect for blending practice. Their smooth surfaces demand seamless shading.</p>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw the outline of an apple.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Identify your light source. Apply graphite to the shadow areas.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Blend from dark to light with a stump. Leave a white highlight.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Add a subtle cast shadow on the table surface.</p></div>
+      </div>
+
+      <div class="warning">
+        <strong>Warning</strong>
+        Over-blending creates muddy, gray drawings. Use blending for <strong>smooth surfaces</strong> (fruit, skin, sky) and hatching for <strong>textured surfaces</strong> (fabric, wood, rough stone). Know when to stop!
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. Which tool gives the most controlled blending?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Finger</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Blending stump</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Tissue</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What mistake should you avoid with blending?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Using a stump</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Over-blending until it looks muddy</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Leaving a white highlight</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 3 Fruits</h3>
+        <p>Draw three pieces of fruit (apple, banana, orange) using blending for smooth shading. Each should have a clear light source, smooth gradient, and cast shadow. Use a blending stump for the main shading and a tissue for the background shadow.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Blending creates smooth, realistic gradients</li>
+        <li>Use blending stumps for control, tissue for large areas</li>
+        <li>Blend from dark to light in one direction</li>
+        <li>Don't over-blend — keep highlights white and edges crisp where needed</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        <a href="https://www.youtube.com/@ALPHONSODUNN" target="_blank" rel="noopener">Alphonso Dunn's shading tutorials</a> cover both hatching and blending in detail.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

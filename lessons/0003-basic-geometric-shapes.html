@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0003: Basic Geometric Shapes</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0003: Basic Geometric Shapes</h1>
+      <p><em>Circles, squares, triangles, and ellipses — the building blocks of everything you'll draw.</em></p>
+
+      <p><span class="phase-badge">Phase 1: Foundation &amp; Line Control</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Draw circles, squares, triangles, and ellipses confidently and consistently — no compass or ruler.
+      </div>
+
+      <h2>Why Shapes Matter</h2>
+      <p>Every complex object is just a combination of simple shapes. A head is an ellipse (sphere). A house is a square + triangle. A bottle is a rectangle + curves. If you can draw basic shapes well, you can draw anything.</p>
+
+      <h2>Circles &amp; Ellipses</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw a circle in one continuous motion. Don't go slow — go smooth. Aim for it to close perfectly.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Fill a row with circles. Then draw concentric circles (one inside another) like a target.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Draw ellipses — stretched circles. Practice them tall (vertical) and wide (horizontal).</p></div>
+      </div>
+
+      <h2>Squares &amp; Triangles</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw a square with four straight sides. Check: are the corners 90 degrees? Are opposite sides parallel?</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Draw a grid of squares. Then rotate them — draw squares at a tilt (diamond shapes).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Draw triangles — equilateral, isosceles, and right triangles. Make the corners sharp and the sides straight.</p></div>
+      </div>
+
+      <div class="warning">
+        <strong>Common Mistake</strong>
+        Beginners draw circles too slowly, which makes them wobble. Speed up slightly — a confident line is smoother than a cautious one, even if it misses the mark. You can always try again.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. How should you draw a circle for the best result?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Very slowly and carefully</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> In one smooth, continuous motion</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> With many short pencil strokes</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What is an ellipse?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> A perfect circle</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> A stretched circle</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> A triangle with curved sides</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: Shape Combo</h3>
+        <p>Draw a simple still life using only basic shapes. For example: an apple (circle + oval), a box (square + rectangle), and a party hat (triangle + rectangle). Don't worry about details — just get the shapes down.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Every drawing is built from circles, squares, triangles, and ellipses</li>
+        <li>Draw circles in one smooth motion — commit to the line</li>
+        <li>Ellipses are stretched circles; practice both orientations</li>
+        <li>Squares need parallel sides and 90-degree corners</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Read <a href="https://www.drawright.com/" target="_blank" rel="noopener"><em>Drawing on the Right Side of the Brain</em> by Betty Edwards</a> — her exercises on seeing shapes are transformative.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher for help, or check the <a href="../reference/glossary.html">glossary</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

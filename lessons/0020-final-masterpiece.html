@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0020: Final Masterpiece</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0020: Final Masterpiece</h1>
+      <p><em>Bring everything together — your portfolio piece.</em></p>
+
+      <p><span class="phase-badge">Phase 5: Advanced Composition &amp; Style</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Create one detailed drawing that combines all the skills from the course — line control, shading, perspective, proportion, and composition — as your portfolio piece.
+      </div>
+
+      <h2>Your Final Challenge</h2>
+      <p>This is the capstone of the entire course. You'll create a single, detailed drawing that demonstrates everything you've learned. Choose one of three paths:</p>
+
+      <div class="project">
+        <h3>Path A: Landscape</h3>
+        <p>Draw a landscape with depth: a foreground (detailed), midground (moderate detail), and background (soft/simple). Use 1-point or 2-point perspective for roads or buildings. Shade with a mix of hatching and blending. Apply the rule of thirds to place your focal point.</p>
+      </div>
+
+      <div class="project">
+        <h3>Path B: Portrait</h3>
+        <p>Draw a portrait from a reference photo. Use the Loomis method for construction. Pay special attention to the eyes (catchlight), nose (shadow under), and lips (value contrast). Use smooth blending for skin and hatching for hair texture.</p>
+      </div>
+
+      <div class="project">
+        <h3>Path C: Imaginative Scene</h3>
+        <p>Draw a scene from your imagination. It must include: at least one object with correct perspective, a figure or creature, shading with at least two techniques, and a composition planned using the rule of thirds.</p>
+      </div>
+
+      <h2>Planning Your Masterpiece</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Choose your path (A, B, or C). Gather reference materials if needed.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Plan the composition with thumbnail sketches. Try 3 different layouts before picking one.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Lightly sketch the basic construction (shapes, perspective lines, guidelines).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Add detail and shading. Work from light to dark. Save highlights for last.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content"><p>Step back, evaluate, and refine. Sign your work!</p></div>
+      </div>
+
+      <h2>What to Submit</h2>
+      <ul>
+        <li>Your final drawing (photo or scan)</li>
+        <li>A brief note on: which path you chose, what skills you used, what you're proudest of</li>
+        <li>Your thumbnail sketches (shows your planning process)</li>
+      </ul>
+
+      <div class="tip">
+        <strong>Remember</strong>
+        This isn't about perfection. It's about showing how far you've come. Compare this drawing to your very first warm-up scribble from Lesson 1. The difference will amaze you.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What's the first step in creating your masterpiece?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Start shading immediately</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Plan with thumbnail sketches</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Use your darkest pencil first</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What should you include with your final drawing?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Nothing — just the drawing</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> A frame</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Thumbnail sketches and a note about your process</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <h2>Course Summary</h2>
+      <p>You've completed all 5 phases and 20 lessons of the Sketch Course. Here's what you've achieved:</p>
+      <ul>
+        <li><strong>Phase 1:</strong> Loosened your hand, mastered lines and shapes, trained observation with contour drawing</li>
+        <li><strong>Phase 2:</strong> Learned shading techniques — hatching, blending, texture — to create depth and form</li>
+        <li><strong>Phase 3:</strong> Understood perspective (1-point and 2-point) and how to measure proportions accurately</li>
+        <li><strong>Phase 4:</strong> Drew the human face using Loomis method and practiced gesture drawing for figures</li>
+        <li><strong>Phase 5:</strong> Applied composition rules, explored personal style, and created your masterpiece</li>
+      </ul>
+      <p>The most important thing now: <strong>keep drawing</strong>. Set a daily practice habit. Join an art community for feedback. And always come back to these lessons when you need a refresher.</p>
+
+      <div class="info">
+        <strong>Congratulations!</strong>
+        You've completed the Sketch Course. Now go fill more sketchbooks!
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'c' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

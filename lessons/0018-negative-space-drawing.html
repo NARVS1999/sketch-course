@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0018: Negative Space Drawing</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0018: Negative Space Drawing</h1>
+      <p><em>Instead of drawing the object, draw the space around it.</em></p>
+
+      <p><span class="phase-badge">Phase 5: Advanced Composition &amp; Style</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Draw an object by drawing only the negative space around it — training spatial awareness and edge perception.
+      </div>
+
+      <h2>What Is Negative Space?</h2>
+      <p><strong>Positive space</strong> = the object itself. <strong>Negative space</strong> = the shapes and gaps around and between objects. When you draw negative space, you're forced to see <strong>edges</strong> instead of symbols. It's a powerful perception hack.</p>
+
+      <h2>The Chair Exercise</h2>
+      <p>This is the classic negative space exercise, popularized by Betty Edwards.</p>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Place a chair in front of you (or use a photo of one).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Instead of drawing the chair's legs and seat, draw the <strong>shapes of the gaps</strong> between them — the space under the seat, between the legs, between the back slats.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Shade these negative spaces dark, leaving the chair itself as white paper.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Step back. You should see a perfectly recognizable chair, even though you never drew a single "chair part."</p></div>
+      </div>
+
+      <h2>Why This Works</h2>
+      <p>Your brain has strong "symbol" habits — it knows what a chair looks like and wants to draw a simplified symbol instead of the real thing. Negative space short-circuits this habit. When you focus on the <em>spaces</em>, your brain has no symbol for "gap under chair" — so it draws what's actually there.</p>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        The most common use of negative space in daily drawing: <strong>checking proportions</strong>. The gap between two objects (or between parts of an object) is just as important as the objects themselves. Train yourself to see both.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What is negative space in a drawing?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> The dark shading on an object</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> The shapes and gaps around and between objects</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> The background color</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. Why does negative space drawing improve accuracy?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> It's easier than drawing the object</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> It bypasses the brain's symbol-drawing habit</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> It makes drawings look darker</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: Negative Space Still Life</h3>
+        <p>Set up a still life with 2–3 objects (a cup, scissors, and a plant, for example). Draw only the negative spaces between them. Shade the spaces dark and leave the objects as white paper. The objects should emerge from the dark areas.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Negative space = the shapes around and between objects</li>
+        <li>Drawing negative space forces you to see real edges, not symbols</li>
+        <li>The chair exercise is the classic negative space drill</li>
+        <li>Use negative space awareness to check proportions in all your drawings</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        <a href="https://www.drawright.com/" target="_blank" rel="noopener"><em>Drawing on the Right Side of the Brain</em></a> has an excellent chapter on negative space with the chair exercise.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

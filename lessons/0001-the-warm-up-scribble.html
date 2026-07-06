@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0001: The Warm-Up Scribble</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0001: The Warm-Up Scribble</h1>
+      <p><em>5-minute non-stop doodle to loosen your hand and quiet the inner critic.</em></p>
+
+      <p><span class="phase-badge">Phase 1: Foundation &amp; Line Control</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Get comfortable holding your pencil and making marks on paper. Kill the fear of the blank page.
+      </div>
+
+      <h2>Why Warm Up?</h2>
+      <p>Every artist — beginner or pro — warms up before serious work. Just like an athlete stretches, your hand and eyes need a few minutes to sync up. A warm-up scribble does three things:</p>
+      <ul>
+        <li>It loosens your wrist and shoulder (not just your fingers)</li>
+        <li>It trains you to draw with <strong>intent</strong> rather than hesitation</li>
+        <li>It proves that <strong>quantity beats quality</strong> in the beginning</li>
+      </ul>
+
+      <h2>Your First Scribble</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <p>Take your sketchpad and an HB pencil. Set a timer for <strong>5 minutes</strong>.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <p>Without lifting your pencil, fill the page with continuous loops, zig-zags, spirals, and figure-eights. <strong>Do not stop</strong> — even if it looks messy.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <p>Every 30 seconds, change your pencil pressure: light (barely touching) &rarr; medium &rarr; heavy (pressing down). Cycle through all three.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <p>When the timer goes off, look at your page. You just made marks — that's the start!</p>
+        </div>
+      </div>
+
+      <h2>Variations to Try</h2>
+      <ul>
+        <li><strong>Clockwise spirals</strong> — then counter-clockwise. Which feels more natural?</li>
+        <li><strong>Zig-zags</strong> — small and tight, then big and sweeping (move from your shoulder)</li>
+        <li><strong>Scratchy marks</strong> — fast, chaotic lines with varying pressure</li>
+      </ul>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What is the main purpose of a warm-up scribble?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> To create a finished drawing</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> To loosen the hand and quiet hesitation</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> To practice shading</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. How often should you change pencil pressure during the scribble?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Every 30 seconds</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Never — keep it consistent</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Only at the beginning</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 5-Day Scribble Log</h3>
+        <p>For the next 5 days, do one 5-minute scribble page before any other drawing. Date each page. At day 5, compare the first page to the last — you'll already see looser, more confident marks.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Warm-ups prepare your hand, eye, and mind for drawing</li>
+        <li>Vary pressure from light to heavy — this builds control</li>
+        <li>Move from your wrist <em>and</em> shoulder, not just your fingers</li>
+        <li>Quantity over quality — the goal is to fill the page, not to make it pretty</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Read <a href="https://www.penguinrandomhouse.com/books/627906/keys-to-drawing-by-bert-dodson/" target="_blank" rel="noopener"><em>Keys to Drawing</em> by Bert Dodson</a> — the first chapter is all about getting loose and making marks.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher! Review the <a href="../reference/glossary.html">glossary</a> if you encounter unfamiliar terms.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'a' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

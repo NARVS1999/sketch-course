@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Techniques Reference — Quick Guide</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Techniques Quick Reference</h1>
+      <p><em>Cheat sheets for the core skills you'll use every time you sketch.</em></p>
+
+      <h2>Pencil Grades &amp; Their Uses</h2>
+      <table>
+        <tr><th>Grade</th><th>Hardness</th><th>Best For</th></tr>
+        <tr><td>2H</td><td>Hard</td><td>Light construction lines, guidelines, faint sketch</td></tr>
+        <tr><td>HB</td><td>Medium</td><td>General sketching, writing, mid-tones</td></tr>
+        <tr><td>2B</td><td>Soft</td><td>Shading, darker lines, good all-rounder</td></tr>
+        <tr><td>4B</td><td>Softer</td><td>Deep shadows, broad shading</td></tr>
+        <tr><td>6B</td><td>Very soft</td><td>Dark darks, large shadow areas, expressive marks</td></tr>
+        <tr><td>8B</td><td>Softest</td><td>Blackest blacks, final dark accents</td></tr>
+      </table>
+      <p><strong>Rule of thumb:</strong> Start light (2H/HB) for construction, build up to soft (2B–6B) for shadows. Hard pencils first — they erase cleanly.</p>
+
+      <h2>Value Scale (9-Step)</h2>
+      <table>
+        <tr><th>Value</th><th>Name</th><th>Pencil</th></tr>
+        <tr><td>1</td><td>White (paper)</td><td>—</td></tr>
+        <tr><td>2</td><td>Near-white</td><td>2H light pressure</td></tr>
+        <tr><td>3</td><td>Light gray</td><td>HB light</td></tr>
+        <tr><td>4</td><td>Mid-light</td><td>HB medium</td></tr>
+        <tr><td>5</td><td>Mid-tone</td><td>2B medium</td></tr>
+        <tr><td>6</td><td>Mid-dark</td><td>4B medium</td></tr>
+        <tr><td>7</td><td>Dark</td><td>6B medium</td></tr>
+        <tr><td>8</td><td>Very dark</td><td>8B medium</td></tr>
+        <tr><td>9</td><td>Black</td><td>8B heavy pressure</td></tr>
+      </table>
+
+      <h2>Shading Gradient Practice</h2>
+      <p>Draw a long rectangle. Fill it with a smooth gradient from white (left) to black (right) using one pencil. Then do it again using hatching, cross-hatching, and blending. Compare results.</p>
+
+      <h2>Perspective Rules</h2>
+      <h3>1-Point Perspective</h3>
+      <ul>
+        <li>One vanishing point (VP) on the horizon line (HL)</li>
+        <li>All depth lines converge to that VP</li>
+        <li>Vertical and horizontal lines stay parallel to the page edges</li>
+        <li>Best for: hallways, roads, front-facing rooms</li>
+      </ul>
+      <h3>2-Point Perspective</h3>
+      <ul>
+        <li>Two vanishing points on the horizon line (left and right)</li>
+        <li>All horizontal lines converge to one of the two VPs</li>
+        <li>Vertical lines stay vertical</li>
+        <li>Best for: buildings from a corner, cubes, exterior scenes</li>
+      </ul>
+
+      <h2>Facial Proportions (Loomis Method)</h2>
+      <ul>
+        <li>Head ≈ 5 eye-widths wide</li>
+        <li>Eyes sit halfway between top of head and chin</li>
+        <li>Bottom of nose is halfway between eyes and chin</li>
+        <li>Mouth sits halfway between nose and chin</li>
+        <li>Ears align between brow line and nose line</li>
+        <li>Corners of mouth align with center of pupils</li>
+      </ul>
+
+      <h2>Figure Proportions</h2>
+      <ul>
+        <li>Adult body ≈ 7.5–8 heads tall</li>
+        <li>Shoulders ≈ 2–3 heads wide</li>
+        <li>Hands ≈ face-sized</li>
+        <li>Elbow aligns with waist</li>
+        <li>Wrist aligns with crotch</li>
+        <li>Knees roughly halfway down the leg</li>
+      </ul>
+
+      <h2>Composition: Rule of Thirds</h2>
+      <p>Divide your page into a 3×3 grid. Place key elements (focal point, horizon) along the grid lines or at their intersections. This creates a more dynamic composition than centering everything.</p>
+
+      <div class="info">
+        <strong>Print-Friendly</strong>
+        This page is designed to print well. Use it as a desk reference while you practice.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0004: Contour Drawing</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0004: Contour Drawing</h1>
+      <p><em>Draw the outline of an object without looking at your paper — pure observation.</em></p>
+
+      <p><span class="phase-badge">Phase 1: Foundation &amp; Line Control</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Train your eye to follow edges and your hand to follow along — building observation skills over symbol-drawing.
+      </div>
+
+      <h2>What Is Contour Drawing?</h2>
+      <p>Contour drawing means drawing the <strong>edge</strong> of an object — where it meets the space around it. The most powerful version is <strong>blind contour</strong>: you look at the object the entire time and <em>never</em> look at your paper until you're done.</p>
+
+      <p>This feels weird at first, and your drawings will look funny. That's the point. Blind contour forces your brain to stop drawing "what it thinks it sees" (symbols) and start drawing <strong>what's actually there</strong> (edges).</p>
+
+      <h2>Blind Contour Exercise</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Place an object in front of you — a coffee mug, a shoe, a crumpled paper bag. Keep it simple.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Put your pencil on the paper. Look at the object. Pick a starting point on its edge.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Slowly trace the edge with your eyes. Your pencil should move at the <strong>exact same speed</strong> as your eyes. Do NOT look at your paper.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Follow every bump, dip, and curve. When you reach the starting point, stop. Now look at your paper.</p></div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Don't peek. The magic of blind contour is that it breaks your brain's habit of drawing symbols (a "cookie-cutter" eye or nose) and forces you to draw what you actually see.
+      </div>
+
+      <h2>Variations</h2>
+      <ul>
+        <li><strong>Modified contour</strong> — you may glance at your paper occasionally, but spend 90% of the time looking at the object</li>
+        <li><strong>Cross-contour</strong> — draw lines that go <em>across</em> the form (like topographic lines on a map) to show volume</li>
+        <li><strong>Your own hand</strong> — the classic exercise. Draw the contour of your non-drawing hand in a complex pose</li>
+      </ul>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. In blind contour drawing, where should you look?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> At your paper</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> At the object you're drawing</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Both, alternating every few seconds</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What skill does blind contour primarily train?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> Shading</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> Observation / seeing edges</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> Perspective</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 5 Blind Contours</h3>
+        <p>Draw 5 different objects using blind contour: your coffee mug, your phone, a plant leaf, your hand, and a crumpled piece of paper. Date each one. Don't judge them — they're not meant to look "good."</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Contour drawing trains your eye-hand connection</li>
+        <li>Blind contour = don't look at the paper — it breaks the symbol-drawing habit</li>
+        <li>Follow edges slowly and carefully, matching eye speed to hand speed</li>
+        <li>Cross-contour adds lines across the form to show volume</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Chapter 4 of <a href="https://www.drawright.com/" target="_blank" rel="noopener"><em>Drawing on the Right Side of the Brain</em></a> has the definitive blind contour exercise. Try it!
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher for help, or check the <a href="../reference/glossary.html">glossary</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

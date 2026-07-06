@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0009: 1-Point Perspective</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0009: 1-Point Perspective</h1>
+      <p><em>Draw a road or hallway shrinking toward a single vanishing point.</em></p>
+
+      <p><span class="phase-badge">Phase 3: Perspective &amp; Proportion</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Draw a scene with 1-point perspective: a road with telephone poles or a hallway with doors.
+      </div>
+
+      <h2>What Is 1-Point Perspective?</h2>
+      <p>It's a way of drawing that makes flat things look 3D. All parallel lines that recede into the distance converge at a single <strong>vanishing point (VP)</strong> on the <strong>horizon line (HL)</strong>. Everything else stays vertical or horizontal.</p>
+
+      <h2>Key Terms</h2>
+      <ul>
+        <li><strong>Horizon Line (HL)</strong> — your eye level. Everything above it is seen from below; everything below it is seen from above.</li>
+        <li><strong>Vanishing Point (VP)</strong> — where all receding lines meet. Usually centered.</li>
+        <li><strong>Orthogonal lines</strong> — the diagonal lines that converge at the VP (road edges, building tops).</li>
+      </ul>
+
+      <h2>Draw a Road</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw a horizontal line across your page — this is your <strong>horizon line</strong>.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Place a dot in the center of the horizon line — your <strong>vanishing point</strong>.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>From the bottom edge of your page, draw two diagonal lines converging at the VP. This is your road.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Add telephone poles: draw vertical lines on each side of the road. Make them smaller and closer together as they approach the VP.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">5</div>
+        <div class="step-content"><p>Add a center line (dashed) converging at the VP. Add a sky and some clouds above the HL.</p></div>
+      </div>
+
+      <h2>Draw a Hallway</h2>
+      <p>Same concept, but indoors. The VP is at the end of the hallway. Doors, windows, and floor tiles all shrink toward the VP.</p>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        All vertical lines stay <strong>perfectly vertical</strong>. All horizontal lines stay <strong>perfectly horizontal</strong>. Only the depth lines (orthogonals) angle toward the VP. If you remember this, 1-point perspective is foolproof.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. Where do all receding lines meet in 1-point perspective?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> At the top of the page</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> At the vanishing point on the horizon line</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> At the bottom of the page</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What do vertical and horizontal lines do in 1-point perspective?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> They also converge at the VP</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> They stay parallel to the page edges</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> They become diagonal</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 1-Point Room</h3>
+        <p>Draw a room from a 1-point perspective: a living room, bedroom, or classroom. Include at least 3 objects (table, chair, window) drawn in correct perspective. The back wall should be a rectangle with the VP at its center.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>1 VP on the HL — all depth lines converge there</li>
+        <li>Vertical and horizontal lines stay parallel to page edges</li>
+        <li>Objects get smaller and closer together as they approach the VP</li>
+        <li>Great for roads, hallways, rooms, and interior scenes</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Try <a href="https://drawabox.com/lesson/1" target="_blank" rel="noopener">Draw a Box Lesson 1: Perspective</a> for structured perspective exercises.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

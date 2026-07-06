@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0005: Light Source Identification</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0005: Light Source Identification</h1>
+      <p><em>Learn where the light comes from — then map the highlights and shadows on any object.</em></p>
+
+      <p><span class="phase-badge">Phase 2: Shading &amp; Volume</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Identify the light source on any scene and draw a sphere with accurate highlight, mid-tone, core shadow, and cast shadow.
+      </div>
+
+      <h2>Light &amp; Form</h2>
+      <p>Without light, there is no form. Every object you draw exists in relation to a light source. Master this and your drawings will pop off the page.</p>
+
+      <h2>The 5 Zones of Light on a Sphere</h2>
+      <p>Draw a circle. Then identify these five zones:</p>
+      <ul>
+        <li><strong>Highlight</strong> — where light hits directly (leave it white)</li>
+        <li><strong>Mid-tone</strong> — the transition zone between light and shadow</li>
+        <li><strong>Terminator</strong> — the line where light stops hitting directly</li>
+        <li><strong>Core Shadow</strong> — the darkest part on the object, just past the terminator</li>
+        <li><strong>Cast Shadow</strong> — the shadow the object throws onto the ground or nearby surface</li>
+      </ul>
+
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Draw a large circle on your page. This is your sphere.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Pick a light source direction (top-left is the default). Draw an arrow showing where light comes from.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Label where the highlight, mid-tone, terminator, core shadow, and cast shadow go.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Shade each zone with your pencil, leaving the highlight as white paper.</p></div>
+      </div>
+
+      <div class="tip">
+        <strong>Tip</strong>
+        Place a real object (like a ping-pong ball) under a desk lamp. Look for the five zones in real life before drawing them. This makes the concept concrete.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What is the darkest part of an object's own shadow called?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Highlight</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Mid-tone</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Core shadow</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. Where should you leave the paper white on a sphere?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> At the core shadow</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> At the highlight</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> On the cast shadow</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 3 Spheres, 3 Light Sources</h3>
+        <p>Draw three spheres side by side. Shade each one with a different light source: top-left, top-right, and bottom (moonlight effect). Label all five zones on each.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Every form has 5 zones: highlight, mid-tone, terminator, core shadow, cast shadow</li>
+        <li>The core shadow is the darkest part <em>on</em> the object</li>
+        <li>The highlight is the brightest — save white paper for it</li>
+        <li>Always establish your light source before you start shading</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Watch <a href="https://www.youtube.com/user/ProkoTV" target="_blank" rel="noopener">Proko's shading basics video</a> — he explains light and form beautifully.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'c', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

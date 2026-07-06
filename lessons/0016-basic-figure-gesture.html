@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 0016: Basic Figure Gesture</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Lesson 0016: Basic Figure Gesture</h1>
+      <p><em>Quick 30-second sketches to capture the movement and energy of a pose.</em></p>
+
+      <p><span class="phase-badge">Phase 4: Portrait &amp; Anatomy</span></p>
+
+      <div class="info">
+        <strong>Lesson Goal</strong>
+        Draw quick gesture sketches (30 seconds) that capture the action and flow of a pose — not the details.
+      </div>
+
+      <h2>What Is Gesture Drawing?</h2>
+      <p>Gesture drawing is NOT about drawing the figure accurately. It's about capturing the <strong>movement, energy, and flow</strong> of a pose in as few lines as possible. It's the opposite of careful, detailed drawing — and it's essential for making your figures feel alive.</p>
+
+      <h2>The Method</h2>
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content"><p>Set a timer for <strong>30 seconds</strong>. Use a reference photo or a real person.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content"><p>Start with a single flowing line — the "line of action" — that captures the main curve of the pose (the spine's curve).</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content"><p>Add a circle for the head, a ribcage shape, and a pelvis shape. Connect them with lines for the spine.</p></div>
+      </div>
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content"><p>Add single lines for arms and legs showing direction and energy. Don't draw hands or feet — just the flow.</p></div>
+      </div>
+
+      <h2>Tips for Great Gestures</h2>
+      <ul>
+        <li><strong>Draw from your shoulder</strong> — big, sweeping motions</li>
+        <li><strong>Exaggerate the curve</strong> — make the action clearer than it actually is</li>
+        <li><strong>Don't stop</strong> — keep the pencil moving even when you're unsure</li>
+        <li><strong>Quantity over quality</strong> — do 20 quick sketches, not 1 detailed one</li>
+      </ul>
+
+      <div class="info">
+        <strong>Where to Get References</strong>
+        <a href="https://line-of-action.com/" target="_blank" rel="noopener">Line of Action</a> and <a href="https://quickposes.com/" target="_blank" rel="noopener">Quickposes</a> have timed photo sets specifically for gesture practice.
+      </div>
+
+      <h2>Quick Quiz</h2>
+      <div class="quiz-item">
+        <div class="quiz-question">1. What is the main goal of a gesture drawing?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q1" value="a"> Draw every muscle accurately</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="b"> Capture the movement and energy of the pose</label>
+          <label class="quiz-option"><input type="radio" name="q1" value="c"> Create a finished, polished figure</label>
+        </div>
+        <div class="quiz-feedback" id="feedback1"></div>
+      </div>
+
+      <div class="quiz-item">
+        <div class="quiz-question">2. What is a "line of action"?</div>
+        <div class="quiz-options">
+          <label class="quiz-option"><input type="radio" name="q2" value="a"> A detailed outline of the figure</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="b"> A single flowing line that captures the main curve of the pose</label>
+          <label class="quiz-option"><input type="radio" name="q2" value="c"> A muscle diagram</label>
+        </div>
+        <div class="quiz-feedback" id="feedback2"></div>
+      </div>
+
+      <button class="quiz-submit" onclick="checkQuiz()">Check Answers</button>
+
+      <div class="project">
+        <h3>Mini-Project: 30-Second Gesture Marathon</h3>
+        <p>Go to <a href="https://line-of-action.com/" target="_blank" rel="noopener">Line of Action</a> and do 20 gesture drawings at 30 seconds each. Don't judge them. The goal is to loosen up and learn to see the big shapes and flow. After 20, do 5 more at 2 minutes each for slightly more detail.</p>
+      </div>
+
+      <h2>Summary</h2>
+      <ul>
+        <li>Gesture = movement and energy, not details</li>
+        <li>Start with the line of action — the main curve of the pose</li>
+        <li>30 seconds per sketch — keep moving</li>
+        <li>Exaggerate the curve to make poses read clearly</li>
+      </ul>
+
+      <div class="info">
+        <strong>Recommended Resource</strong>
+        Proko's <a href="https://www.youtube.com/user/ProkoTV" target="_blank" rel="noopener">gesture drawing playlist</a> is the best free resource. Also check out Glenn Vilppu's gesture approach.
+      </div>
+
+      <div class="info">
+        <strong>Questions?</strong>
+        Ask your teacher, or check the <a href="../reference/glossary.html">glossary</a> and <a href="../reference/techniques-reference.html">techniques reference</a>.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  function checkQuiz() {
+    var answers = { q1: 'b', q2: 'b' };
+    for (var key in answers) {
+      var sel = document.querySelector('input[name="' + key + '"]:checked');
+      var fb = document.getElementById('feedback' + key.slice(1));
+      if (!sel) {
+        fb.textContent = 'Please select an answer.';
+        fb.className = 'quiz-feedback incorrect';
+        continue;
+      }
+      if (sel.value === answers[key]) {
+        fb.textContent = '\u2705 Correct! Well done.';
+        fb.className = 'quiz-feedback correct';
+      } else {
+        fb.textContent = '\u274C Incorrect. Review the material and try again.';
+        fb.className = 'quiz-feedback incorrect';
+      }
+    }
+  }
+</script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>

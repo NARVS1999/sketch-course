@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch Glossary — Reference</title>
+  <link rel="stylesheet" href="../assets/style.css">
+  <script>if (localStorage.getItem("theme") === "dark") document.documentElement.setAttribute("data-theme", "dark");</script>
+  <style>
+    .glossary-term { margin-bottom: 1.5rem; }
+    .glossary-term h3 { margin-bottom: 0.25rem; }
+    .glossary-term .avoid { color: var(--muted); font-size: 0.85rem; font-family: var(--font-sans); }
+  </style>
+</head>
+<body>
+<button class="theme-toggle" id="themeToggle" title="Toggle theme">&#9788;</button>
+<div class="lesson-layout">
+  <aside class="lesson-sidebar" id="lesson-sidebar"></aside>
+  <main class="lesson-main">
+    <div class="lesson-container">
+
+      <h1>Sketching Glossary</h1>
+      <p><em>Key terms used throughout this course — the language of sketching.</em></p>
+
+      <div class="glossary-term">
+        <h3>Contour</h3>
+        <p>The outline or edge defining a form. Contour drawing trains you to follow edges with your eye and hand simultaneously.</p>
+        <p class="avoid"><em>Avoid:</em> Outlining, tracing</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Hatching</h3>
+        <p>A shading technique using parallel lines. Closer lines = darker value; wider spacing = lighter value.</p>
+        <p class="avoid"><em>Avoid:</em> Scribble shading, messy lines</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Cross-hatching</h3>
+        <p>Layers of hatching at different angles (usually perpendicular) to build deeper values and texture.</p>
+        <p class="avoid"><em>Avoid:</em> Grid shading, random marks</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Blending</h3>
+        <p>Smoothing graphite with a tool (stump, tissue, finger) to create a seamless gradient. Best for soft transitions like skin or sky.</p>
+        <p class="avoid"><em>Avoid:</em> Over-blending (muddy look)</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Value</h3>
+        <p>How light or dark a tone is. A value scale ranges from white (highlight) through mid-tones to black (shadow).</p>
+        <p class="avoid"><em>Avoid:</em> Brightness, color intensity</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Highlight</h3>
+        <p>The brightest spot on a form where light hits directly. Usually left as white paper.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Core Shadow</h3>
+        <p>The darkest part of the shadow on an object, just beyond the terminator (where light stops hitting directly).</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Cast Shadow</h3>
+        <p>The shadow an object throws onto another surface. Its shape tells you about the light source and the receiving surface.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Vanishing Point (VP)</h3>
+        <p>The point on the horizon line where parallel lines appear to converge in perspective drawing.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Horizon Line (HL)</h3>
+        <p>The line representing the viewer's eye level in a perspective drawing. All vanishing points sit on this line.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Foreshortening</h3>
+        <p>The visual compression of an object or body part extending toward or away from the viewer, creating the illusion of depth.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Loomis Method</h3>
+        <p>A constructive approach to drawing the head using a sphere, jaw plane, and guidelines to place features proportionally. Developed by Andrew Loomis.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Gesture</h3>
+        <p>A quick, loose sketch capturing the movement and energy of a pose — not the details. Usually done in 30 seconds to 2 minutes.</p>
+        <p class="avoid"><em>Avoid:</em> Stiff poses, anatomical details in gesture</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Negative Space</h3>
+        <p>The shapes and spaces around and between the subject. Drawing negative space helps you see edges more accurately.</p>
+      </div>
+
+      <div class="glossary-term">
+        <h3>Sight-Size</h3>
+        <p>A measuring technique where you hold your pencil at arm's length, align it with a part of your subject, and transfer that measurement to your paper.</p>
+      </div>
+
+      <div class="info">
+        <strong>Tip</strong>
+        Refer back to this glossary whenever you encounter an unfamiliar term in a lesson. These terms are used consistently throughout the course.
+      </div>
+
+      <div class="lesson-nav"></div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../assets/lessons-data.js"></script>
+<script src="../assets/sidebar.js"></script>
+<script src="../assets/lesson-nav.js"></script>
+<script>
+  (function() {
+    var btn = document.getElementById('themeToggle');
+    if (btn) {
+      btn.addEventListener('click', function() {
+        var html = document.documentElement;
+        var isDark = html.getAttribute('data-theme') === 'dark';
+        if (isDark) { html.removeAttribute('data-theme'); localStorage.setItem('theme', 'light'); }
+        else { html.setAttribute('data-theme', 'dark'); localStorage.setItem('theme', 'dark'); }
+      });
+    }
+  })();
+</script>
+</body>
+</html>
